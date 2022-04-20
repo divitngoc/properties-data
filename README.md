@@ -1,3 +1,3 @@
-# properties-scraper
+# properties-data
 
 ### Rightmove scraper
