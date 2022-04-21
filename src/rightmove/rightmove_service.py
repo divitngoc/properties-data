@@ -2,20 +2,20 @@
 import logging
 from bs4 import BeautifulSoup
 
-from rightmove_client import RightMoveClient
+from rightmove_client import RightmoveClient
 from models.rightmove_request import RightmoveRequest
 
 SOUP_PARSER = "html.parser"
 log = logging.getLogger()
 
-class RightMoveService:
+class RightmoveService:
     def __init__(self):
-        self.client = RightMoveClient()
+        self.client = RightmoveClient()
 
     def get_number_properties_for_sale(self, context: RightmoveRequest) -> int:
         response = self.client.get_properties_for_sale(context.getParams())
         if response.status_code >= 400:
-            raise Exception("Response code is %s, skipping getting number of properties", response.status_code)
+            raise Exception(f"Response code is {response.status_code}, skipping getting number of properties")
 
         soup = BeautifulSoup(response.content, SOUP_PARSER)
         resultCountList = soup.find_all("span", class_ = "searchHeader-resultCount")
