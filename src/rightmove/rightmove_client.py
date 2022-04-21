@@ -6,7 +6,7 @@ log = logging.getLogger()
 BASE_URL = "https://www.rightmove.co.uk/"
 PARAMS = {}
 
-class RightMoveClient:
+class RightmoveClient:
     def __init__self(self):
         return
 
