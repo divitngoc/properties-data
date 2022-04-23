@@ -4,7 +4,6 @@ import logging
 log = logging.getLogger()
 
 BASE_URL = "https://www.rightmove.co.uk/"
-PARAMS = {}
 
 class RightmoveClient:
     def __init__self(self):

@@ -7,7 +7,6 @@ class RightmoveScraper:
         self.rightmove_service = RightmoveService()
         self.property_service = PropertyService()
 
-
     def get_number_properties_for_sale(self, context: RightmoveRequest) -> int:
         number_of_properties = self.rightmove_service.get_number_properties_for_sale(context)
         self.property_service.insert(number_of_properties, context)
