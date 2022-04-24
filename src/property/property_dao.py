@@ -18,9 +18,9 @@ class PropertyDao:
                         password=db_password,
                         options="-c search_path=divit") # Heroku created this schema
 
-    def insert(self, number_of_properties: int, created: datetime, region: str) -> None:
+    def insert(self, number_of_properties: int, created: datetime, region: str, created_by: str) -> None:
         with self.conn.cursor() as cursor:
-            cursor.execute("INSERT INTO property_for_sale_log (no_properties, created, region) VALUES (%s, %s, %s)", [number_of_properties, created, region]);
+            cursor.execute("INSERT INTO property_for_sale_log (no_properties, created, region, created_by) VALUES (%s, %s, %s, %s)", [number_of_properties, created, region, created_by]);
             self.conn.commit()
 
     def __del__(self):
