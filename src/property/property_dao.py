@@ -4,10 +4,10 @@ import os
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(dotenv_path=find_dotenv()) # load from .env file
-db_host = os.getenv("db_host")
-db_name = os.getenv("db_name")
-db_user = os.getenv("db_user")
-db_password = os.getenv("db_password")
+db_host = os.getenv("DB_HOST")
+db_name = os.getenv("DB_NAME")
+db_user = os.getenv("DB_USER")
+db_password = os.getenv("DB_PASSWORD")
 
 class PropertyDao:
     def __init__(self) -> None:
