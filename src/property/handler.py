@@ -10,6 +10,9 @@ log = logging.getLogger()
 
 app = RightmoveScraper()
 
-if __name__ == '__main__':
-    #TODO able to pass in different params for rightmove request
+def lambda_handler(event=None, context=None):
     number_of_properties_for_sale = app.get_number_properties_for_sale(RightmoveRequest())
+    return number_of_properties_for_sale
+
+if __name__ == '__main__':
+    log.info(lambda_handler(None, None))

@@ -1,4 +1,4 @@
 beautifulsoup4
 requests
-psycopg2
+aws-psycopg2
 python-dotenv
