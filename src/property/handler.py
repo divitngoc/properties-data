@@ -4,7 +4,6 @@ from rightmove_scraper import RightmoveScraper
 from models.rightmove_request import RightmoveRequest
 
 logging_level = os.environ.get("logging-level", "DEBUG")
-
 logging.basicConfig(level = logging._nameToLevel.get(logging_level))
 log = logging.getLogger()
 
