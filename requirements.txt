@@ -2,6 +2,3 @@ beautifulsoup4
 requests
 aws-psycopg2
 python-dotenv
-matplotlib
-numpy
-dacite

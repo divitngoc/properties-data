@@ -1,6 +1,5 @@
 from datetime import datetime
 from property_dao import PropertyDao
-from models.db.propery_for_sale_log import PropertyForSaleLog
 import logging
 
 log = logging.getLogger()
@@ -16,6 +15,3 @@ class PropertyService:
             created=datetime.utcnow(),
             region=region,
             created_by=created_by)
-    
-    def fetchAllPropertyForSaleLog(self) -> list[PropertyForSaleLog]:
-        return self.dao.fetchAllPropertyForSaleLog()
