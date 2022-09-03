@@ -17,8 +17,8 @@ class PropertyDao:
                         host=db_host,
                         database=db_name,
                         user=db_user,
-                        password=db_password,
-                        options="-c search_path=divit") # Heroku created this schema
+                        password=db_password)
+                        #options="-c search_path=divit") # Heroku created this schema
 
     def insert(self, number_of_properties: int, created: datetime, region: str, created_by: str) -> None:
         with self.conn.cursor() as cursor:
